@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 });
 
 app.use(cors({
-    origin: ['http://localhost:5173' || 'https://imagifyyyy.netlify.app'],
+    origin: [process.env.FRONTEND_URL ||'http://localhost:5173' || 'https://imagifyyyy.netlify.app'],
     methods: ["POST", "PUT", "DELETE", "GET"],
     credentials: true,
     optionsSuccessStatus: 200,
